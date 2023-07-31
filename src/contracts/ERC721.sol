@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
+import './interfaces/IERC721.sol';
+import './ERC165.sol';
+
 
   /*
 
@@ -14,9 +17,9 @@ pragma solidity >=0.4.22 <0.9.0;
 
   */
 
-contract ERC721 {
+contract ERC721 is ERC165, IERC721 {
 
-  event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+  // event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
 
   // mapping in solidity creates a hash table of key pair values
 
@@ -27,13 +30,18 @@ contract ERC721 {
   // Mapping from owner to number of owned token
   mapping(address => uint256) private _OwnedTokensCount;
 
+    constructor() {
+      _registerInterface(bytes4(keccak256('balanceOf(bytes4)')^
+      keccak256('ownerOf(bytes4)')));
+  }
+
   /// @notice Count all NFTs assigned to an owner
   /// @dev NFTs assigned to the zero address are considered invalid, and this
   ///  function throws for queries about the zero address.
   /// @param _owner An address for whom to query the balance
   /// @return The number of NFTs owned by `_owner`, possibly zero
   // 토큰의 소유자가 가지고 있는 토큰의 개수를 반환하는 함수
-  function balanceOf(address _owner) public view returns(uint256) {
+  function balanceOf(address _owner) public override view returns(uint256) {
     require(_owner != address(0), "ERC721: balance query for the zero address");
     return _OwnedTokensCount[_owner];
   }
@@ -44,7 +52,7 @@ contract ERC721 {
   /// @param _tokenId The identifier for an NFT
   /// @return The address of the owner of the NFT
   // 토큰의 소유자를 반환하는 함수
-  function ownerOf(uint256 _tokenId) external view returns (address) {
+  function ownerOf(uint256 _tokenId) external override view returns (address) {
     address owner = _tokenOwner[_tokenId];
     require(owner != address(0), "ERC721: owner query for nonexistent token");
     return owner;
