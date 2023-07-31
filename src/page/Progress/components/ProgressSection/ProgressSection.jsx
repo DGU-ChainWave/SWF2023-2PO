@@ -13,7 +13,6 @@ import {
   DonateButton,
   FullBar,
   Bar,
-  BottomBox,
   TypoContainer,
   TypoOrange
 } from "./styled";
