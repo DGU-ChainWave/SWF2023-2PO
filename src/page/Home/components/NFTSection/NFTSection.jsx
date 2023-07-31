@@ -24,7 +24,7 @@ export const NFTSection = () => {
           <Title>
             기부런의 <OrangTitle>NFT</OrangTitle>를 발급받으세요!
           </Title>
-          <Typo top="60px" bottom="10px">
+          <Typo top="40px" bottom="4px">
             새로운 인증의 시대,
           </Typo>
           <Typo bottom="60px">기부런 NFT와 시작할 수 있습니다.</Typo>
