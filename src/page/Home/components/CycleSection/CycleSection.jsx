@@ -5,7 +5,6 @@ import {
   OrangeCircle,
   OrangeTitle,
   PurpleCircle,
-  RightContainer,
   Root,
   SubHeading,
   SubTitle,
