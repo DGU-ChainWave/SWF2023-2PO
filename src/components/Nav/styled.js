@@ -50,7 +50,7 @@ export const NavItem = styled.div`
 
 export const Tooltip = styled.div`
   position: absolute;
-  top: 140%;
+  top: 120%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
