@@ -8,3 +8,4 @@ export { NFT } from "./NFT";
 export { Token } from "./Token";
 export { Intro } from "./Intro";
 export { BehindDetail } from "./BehindDetail";
+export { Throw } from "./Throw";

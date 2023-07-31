@@ -12,7 +12,7 @@ const navItems = [
       { name: "지갑 연동", src: "wallet" },
       { name: "NFT", src: "nft" },
       { name: "토큰 사용법", src: "token" },
-      { name: "기부금 전달 방식", src: "transfer" },
+      { name: "기부금 전달 방식", src: "Throw" },
     ],
   },
   {
