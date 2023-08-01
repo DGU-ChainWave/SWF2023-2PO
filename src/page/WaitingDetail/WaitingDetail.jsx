@@ -31,510 +31,508 @@ import {
 import Web3 from "web3";
 
 export const WaitingDetail = () => {
-
   // 컨트랙트 관련
-// Infura Goerli
-const infuraUrl = `https://goerli.infura.io/v3/7f43f66b07a54707985b23f17e60410a`;
-const web3 = new Web3(infuraUrl);
+  // Infura Goerli
+  const infuraUrl = `https://goerli.infura.io/v3/7f43f66b07a54707985b23f17e60410a`;
+  const web3 = new Web3(infuraUrl);
 
-// 컨트랙스 주소와 ABI 정의
-const contractAddress = "0x6F3a7F2b3Fad8ccA0A9800001D9779BBf895B316"; // 여기에 컨트랙트 주소를 입력합니다.
-const contractABI = [
-  [
-    {
-      inputs: [],
-      stateMutability: "nonpayable",
-      type: "constructor",
-    },
-    {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: "address",
-          name: "owner",
-          type: "address",
-        },
-        {
-          indexed: true,
-          internalType: "address",
-          name: "spender",
-          type: "address",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "value",
-          type: "uint256",
-        },
-      ],
-      name: "Approval",
-      type: "event",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "spender",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "amount",
-          type: "uint256",
-        },
-      ],
-      name: "approve",
-      outputs: [
-        {
-          internalType: "bool",
-          name: "",
-          type: "bool",
-        },
-      ],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "uint256",
-          name: "amount",
-          type: "uint256",
-        },
-      ],
-      name: "burn",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "account",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "amount",
-          type: "uint256",
-        },
-      ],
-      name: "burnFrom",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "spender",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "subtractedValue",
-          type: "uint256",
-        },
-      ],
-      name: "decreaseAllowance",
-      outputs: [
-        {
-          internalType: "bool",
-          name: "",
-          type: "bool",
-        },
-      ],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "spender",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "addedValue",
-          type: "uint256",
-        },
-      ],
-      name: "increaseAllowance",
-      outputs: [
-        {
-          internalType: "bool",
-          name: "",
-          type: "bool",
-        },
-      ],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "to",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "amount",
-          type: "uint256",
-        },
-      ],
-      name: "mint",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: "address",
-          name: "previousOwner",
-          type: "address",
-        },
-        {
-          indexed: true,
-          internalType: "address",
-          name: "newOwner",
-          type: "address",
-        },
-      ],
-      name: "OwnershipTransferred",
-      type: "event",
-    },
-    {
-      inputs: [],
-      name: "renounceOwnership",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [],
-      name: "snapshot",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "id",
-          type: "uint256",
-        },
-      ],
-      name: "Snapshot",
-      type: "event",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "to",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "amount",
-          type: "uint256",
-        },
-      ],
-      name: "transfer",
-      outputs: [
-        {
-          internalType: "bool",
-          name: "",
-          type: "bool",
-        },
-      ],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: "address",
-          name: "from",
-          type: "address",
-        },
-        {
-          indexed: true,
-          internalType: "address",
-          name: "to",
-          type: "address",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "value",
-          type: "uint256",
-        },
-      ],
-      name: "Transfer",
-      type: "event",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "from",
-          type: "address",
-        },
-        {
-          internalType: "address",
-          name: "to",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "amount",
-          type: "uint256",
-        },
-      ],
-      name: "transferFrom",
-      outputs: [
-        {
-          internalType: "bool",
-          name: "",
-          type: "bool",
-        },
-      ],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "newOwner",
-          type: "address",
-        },
-      ],
-      name: "transferOwnership",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "owner",
-          type: "address",
-        },
-        {
-          internalType: "address",
-          name: "spender",
-          type: "address",
-        },
-      ],
-      name: "allowance",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "account",
-          type: "address",
-        },
-      ],
-      name: "balanceOf",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "account",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "snapshotId",
-          type: "uint256",
-        },
-      ],
-      name: "balanceOfAt",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [],
-      name: "decimals",
-      outputs: [
-        {
-          internalType: "uint8",
-          name: "",
-          type: "uint8",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [],
-      name: "name",
-      outputs: [
-        {
-          internalType: "string",
-          name: "",
-          type: "string",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [],
-      name: "owner",
-      outputs: [
-        {
-          internalType: "address",
-          name: "",
-          type: "address",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [],
-      name: "symbol",
-      outputs: [
-        {
-          internalType: "string",
-          name: "",
-          type: "string",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [],
-      name: "totalSupply",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "uint256",
-          name: "snapshotId",
-          type: "uint256",
-        },
-      ],
-      name: "totalSupplyAt",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256",
-        },
-      ],
-      stateMutability: "view",
-      type: "function",
-    },
-  ],
-];
+  // 컨트랙스 주소와 ABI 정의
+  const contractAddress = "0x6F3a7F2b3Fad8ccA0A9800001D9779BBf895B316"; // 여기에 컨트랙트 주소를 입력합니다.
+  const contractABI = [
+    [
+      {
+        inputs: [],
+        stateMutability: "nonpayable",
+        type: "constructor",
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "owner",
+            type: "address",
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "spender",
+            type: "address",
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256",
+          },
+        ],
+        name: "Approval",
+        type: "event",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256",
+          },
+        ],
+        name: "approve",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256",
+          },
+        ],
+        name: "burn",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "account",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256",
+          },
+        ],
+        name: "burnFrom",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "subtractedValue",
+            type: "uint256",
+          },
+        ],
+        name: "decreaseAllowance",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "addedValue",
+            type: "uint256",
+          },
+        ],
+        name: "increaseAllowance",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256",
+          },
+        ],
+        name: "mint",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "previousOwner",
+            type: "address",
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newOwner",
+            type: "address",
+          },
+        ],
+        name: "OwnershipTransferred",
+        type: "event",
+      },
+      {
+        inputs: [],
+        name: "renounceOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "snapshot",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "id",
+            type: "uint256",
+          },
+        ],
+        name: "Snapshot",
+        type: "event",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256",
+          },
+        ],
+        name: "transfer",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "from",
+            type: "address",
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256",
+          },
+        ],
+        name: "Transfer",
+        type: "event",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256",
+          },
+        ],
+        name: "transferFrom",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "newOwner",
+            type: "address",
+          },
+        ],
+        name: "transferOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address",
+          },
+        ],
+        name: "allowance",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "account",
+            type: "address",
+          },
+        ],
+        name: "balanceOf",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "account",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "snapshotId",
+            type: "uint256",
+          },
+        ],
+        name: "balanceOfAt",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "decimals",
+        outputs: [
+          {
+            internalType: "uint8",
+            name: "",
+            type: "uint8",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "name",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "owner",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "symbol",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "totalSupply",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "snapshotId",
+            type: "uint256",
+          },
+        ],
+        name: "totalSupplyAt",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+    ],
+  ];
 
-// 컨트랙트 인스턴스를 생성합니다.
-const contract = new web3.eth.Contract(contractABI, contractAddress);
-console.log(contract);
-//토큰 수량 =================================
-const [TokenAmount, setTokenAmount] = useState("");
-const [receiverAddress, setReceiverAddress] = useState("");
-const handleReceiverAddressChange = (e) => setReceiverAddress(e.target.value);
+  // 컨트랙트 인스턴스를 생성합니다.
+  const contract = new web3.eth.Contract(contractABI, contractAddress);
+  console.log(contract);
+  //토큰 수량 =================================
+  const [TokenAmount, setTokenAmount] = useState("");
+  const [receiverAddress, setReceiverAddress] = useState("");
+  const handleReceiverAddressChange = (e) => setReceiverAddress(e.target.value);
 
-// 토큰 수량 값이 변경될 때 호출되는 함수
-const handleTokenAmountChange = (e) => {
-  // 토큰 수량 값을 상태(state)에 저장
-  setTokenAmount(e.target.value);
-};
+  // 토큰 수량 값이 변경될 때 호출되는 함수
+  const handleTokenAmountChange = (e) => {
+    // 토큰 수량 값을 상태(state)에 저장
+    setTokenAmount(e.target.value);
+  };
 
-// 토큰 등록 버튼을 클릭했을 때 호출되는 함수
-const handleTokenSubmit = () => {
-  // 토큰 등록 처리 로직 추가
+  // 토큰 등록 버튼을 클릭했을 때 호출되는 함수
+  const handleTokenSubmit = () => {
+    // 토큰 등록 처리 로직 추가
 
-  console.log("컨트랙트 주소: ", contract);
-  console.log("수량 입력: ", TokenAmount);
-  // 토큰 입력 값을 초기화
-  setTokenAmount("");
-};
+    console.log("컨트랙트 주소: ", contract);
+    console.log("수량 입력: ", TokenAmount);
+    // 토큰 입력 값을 초기화
+    setTokenAmount("");
+  };
 
-const totalButton =() => {
-  handleTokenSubmit();
-  handleCloseAndOpen();
-  handleToken();
-};  
-
-
+  const totalButton = () => {
+    handleTokenSubmit();
+    handleCloseAndOpen();
+    handleToken();
+  };
 
   //  이더리움 기부 처리 함수 (미정)
   const handleToken = async () => {
-    const accounts = await web3.eth.getAccounts(); // 사용자 계정 가져오기
-    const sender = accounts[0]; // 보내는 사람의 주소
-    const receiver = "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a";     // 기부 대상자 지갑 주소
-    const amount = web3.utils.toWei(/*이더리움의 양*/ TokenAmount, "ether"); // 이더리움의 양을 Wei 단위로 변환
-    console.log("기부 대상자 지갑주소 진짜: ", receiver);
+    try {
+      const accounts = await web3.eth.getAccounts(); // 사용자 계정 가져오기
+      //const sender = "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a";
+      const sender = accounts[0]; // 보내는 사람의 주소
+      const receiver = selectedContent.address; //{selectedContent.address}; // 기부 대상자 지갑 주소
+      console.log("보내는 사람 주소 ", sender);
+      console.log("기부 대상자 지갑주소 진짜: ", receiver);
+      const amount = web3.utils.toWei(/*이더리움의 양*/ TokenAmount, "ether"); // 이더리움의 양을 Wei 단위로 변환
 
-    // 이더리움 전송하기
-    await web3.eth
-      .sendTransaction({
-        from: sender,
-        to: receiver,
-        value: amount,
-      })
-      .then((receipt) => {
-        console.log(receipt);
-      });
-  }; 
-  //-- 컨트랙트 관련
+      // 이더리움 전송하기
+      const receipt = await contract.methods
+        .sendEther(receiver)
+        .send({ from: sender, value: amount });
+
+      console.log(receipt);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   //모달창
   const [showFirstModal, setShowFirstModal] = useState(false); // 첫 번째 모달 상태
@@ -558,10 +556,10 @@ const totalButton =() => {
 
   const handleCloseAndOpen = () => {
     setShowFirstModal(false);
-         // 2초 뒤 두 번째 모달 열기
-         setTimeout(() => {
-          setShowSecondModal(true); //두 번쨰 모달을 엽니다.
-        }, 2000); 
+    // 2초 뒤 두 번째 모달 열기
+    setTimeout(() => {
+      setShowSecondModal(true); //두 번쨰 모달을 엽니다.
+    }, 2000);
   };
 
   const [scrollY, setScrollY] = useState(0);
@@ -655,8 +653,13 @@ const totalButton =() => {
                       >
                         사용할 토큰을 입력해주세요.
                       </Typo>
-                      <Box width="400px" height="auto" gap="50px" >
-                        <Typo size="16px" color="#647488" bottom="10px" left="30px">
+                      <Box width="400px" height="auto" gap="50px">
+                        <Typo
+                          size="16px"
+                          color="#647488"
+                          bottom="10px"
+                          left="30px"
+                        >
                           계정: Account1
                         </Typo>
                         <Typo size="16px" color="#647488" bottom="10px">
@@ -680,17 +683,16 @@ const totalButton =() => {
                         justifyContent="center"
                         gap="20px"
                       >
-                  
                         <OrangeButton
-                    width="120px"
-                    height="35px"
-                    onClick={totalButton}
-                    right="20px"
-                  >
-                    <Typo size="15px" color="#fff" fontWeight="700">
-                      확인
-                    </Typo>
-                  </OrangeButton>
+                          width="120px"
+                          height="35px"
+                          onClick={totalButton}
+                          right="20px"
+                        >
+                          <Typo size="15px" color="#fff" fontWeight="700">
+                            확인
+                          </Typo>
+                        </OrangeButton>
 
                         <CloseButton onClick={handleCloseFirstModal}>
                           <Typo size="15px" fontWeight="700" color="#fff">

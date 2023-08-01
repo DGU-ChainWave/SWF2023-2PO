@@ -63,8 +63,7 @@ export const Upper = () => {
   return (
     <UpperContainer>
       <TitleContainer>
-      <Title>거래 내역 탐색기</Title>
-
+        <Title>거래 내역 탐색기</Title>
       </TitleContainer>
       <SearchContainer>
         <SearchBar />
@@ -127,11 +126,11 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x200D5ED7F45F4eE35960cF22EAde2076e75B253C" />
 
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0x200D5ED7F45F4eE35960cF22EAde2076e75B253C
                 </Address>
                 <TXButton>TX</TXButton>
               </TableCell>
@@ -139,10 +138,10 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x569DDba95A4bA347bd239DED8f8983bb5C4AC8" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0x569DDba95A4bA347bd239DED8f8983bb4ASCFC8
                 </Address>
                 <TXButton>TX</TXButton>
               </TableCell>
@@ -150,10 +149,10 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0xb20B6fF0731465C083d8A2222f5093f27867446D" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0xb20B6fF0731465C083d8A2222f5093f278SC67446D
                 </Address>
                 <NFTButton>NFT</NFTButton>
               </TableCell>
@@ -162,10 +161,10 @@ export const Lower = () => {
               <TableCell>
                 <BlockIcon />
 
-                <TxDetail tx="0x788D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0xa2b398FCb151a0Cf127D2a46297815f0F6c82C78" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0xa2b398CSFCb151a0Cf127D2a462978150F6c82C78
                 </Address>
                 <TXButton>TX</TXButton>
               </TableCell>
@@ -173,10 +172,10 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x099D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0xa2b398FCb151a0Cf127D2a46297815f0F6c82C78" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0xa2b398FCb151a0Cf17D2a46297815f0FCS6c82C78
                 </Address>
                 <TXButton>TX</TXButton>
               </TableCell>
@@ -184,10 +183,10 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x111d4f7A8E5D579b26FB1418600c3730cBbae72A" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0x111d4f7A8E5D579b26FB1C418600c3730cBbae72A
                 </Address>
                 <NFTButton>NFT</NFTButton>
               </TableCell>
@@ -195,10 +194,10 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x20b4E32157A549761Bb51D17bb1388872978FFda" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0x20b4E32157A549761Bb51D17bb1388872978FFda
                 </Address>
                 <NFTButton>NFT</NFTButton>
               </TableCell>
@@ -206,10 +205,10 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x6a36d0feB51A663B0603598a03862746bE0f5564" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0x6a36d0feB51A663B06035CS8a03862746bE0f5564
                 </Address>
                 <NFTButton>NFT</NFTButton>
               </TableCell>
@@ -217,10 +216,10 @@ export const Lower = () => {
             <TableRow>
               <TableCell>
                 <BlockIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x62099Ab0eeee03de0a36561Eac64357eFfC85Eb9" />
                 <AddressLabel>To.</AddressLabel>
                 <Address href="#">
-                  0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                  0x62099Ab0eeee03de0a36561Eac6435C7eFfC85Eb9
                 </Address>
                 <NFTButton>NFT</NFTButton>
               </TableCell>
@@ -244,18 +243,18 @@ export const Lower = () => {
             <BlockRow>
               <BlockCell>
                 <BlockErrorIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0xd882296EE239C79478633f07e12963Bb72F33945" />
                 <BlockCellTx>
                   <TxInfo>
                     <AddressLabel>To.</AddressLabel>
                     <Address href="#">
-                      0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                      0xd882296EE239C79478633f07e12963Bb72F33945
                     </Address>
                   </TxInfo>
                   <TxInfo>
                     <AddressLabel>From.</AddressLabel>
                     <Address href="#">
-                      0x689D5ED7F45F4eE35960cF22EAde2076e95B253F
+                      0x082b7ec140f8c48E1b532625C27d911A417305de
                     </Address>
                   </TxInfo>
                 </BlockCellTx>
@@ -284,12 +283,12 @@ export const Lower = () => {
             <BlockRow>
               <BlockCell>
                 <BlockErrorIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x330c0F7Fd73D41D9915bDBe8448d490A397fBeA2" />
                 <BlockCellTx>
                   <TxInfo>
                     <AddressLabel>To.</AddressLabel>
                     <Address href="#">
-                      0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                      0x330c0F7Fd73D41D9915bDBe8448d490A397fBeA2
                     </Address>
                   </TxInfo>
                   <TxInfo>
@@ -304,12 +303,12 @@ export const Lower = () => {
             <BlockRow>
               <BlockCell>
                 <BlockErrorIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x9D36F8894757cf8a5DCd693dfA13963f6b9D097d" />
                 <BlockCellTx>
                   <TxInfo>
                     <AddressLabel>To.</AddressLabel>
                     <Address href="#">
-                      0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                      0x9D36F8894757cf8a5DCd693dfA13963f6b9D097d
                     </Address>
                   </TxInfo>
                   <TxInfo>
@@ -324,12 +323,12 @@ export const Lower = () => {
             <BlockRow>
               <BlockCell>
                 <BlockErrorIcon />
-                <TxDetail tx="0x199D5ED7F45F4eE35960cF22EAde2076e95B253F" />
+                <TxDetail tx="0x1F0697264E524a682a0697cefB6FFCcCD86257c4" />
                 <BlockCellTx>
                   <TxInfo>
                     <AddressLabel>To.</AddressLabel>
                     <Address href="#">
-                      0x199D5ED7F45F4eE35960cF22EAde2076e95B253F
+                      0x1F0697264E524a682a0697cefB6FFCcCD86257c4
                     </Address>
                   </TxInfo>
                   <TxInfo>

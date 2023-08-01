@@ -6,7 +6,7 @@ export const UpIcon = styled.img`
   left: 0px;
   width: 100%;
   height: 880px;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const TextIcon = styled.img`
@@ -15,7 +15,7 @@ export const TextIcon = styled.img`
   left: 252px;
   width: 868px;
   height: 43px;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const V = styled.img`
@@ -25,9 +25,9 @@ export const V = styled.img`
   transform: translate(-50%, -50%);
   width: ${(props) => (props.screenWidth <= 1280 ? "100%" : "3000px")};
   height: ${(props) => (props.screenWidth <= 1280 ? "auto" : "2500px")};
-  max-width: 3000px;
-  max-height: 2500px;
-  object-fit: cover;
+  /*   max-width: 3000px;
+  max-height: 2500px; */
+  object-fit: contain;
   opacity: 0.7;
 `;
 
@@ -57,9 +57,9 @@ export const Icon1 = styled.img`
   position: absolute;
   top: 1319px;
   left: 155px;
-  width: 1006px;
+  width: fit-content;
   height: 1792px;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const DivRoot = styled.div`

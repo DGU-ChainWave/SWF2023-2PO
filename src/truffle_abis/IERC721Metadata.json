@@ -37,7 +37,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IERC721Metadata {\r\n\r\n    function name() external view returns (string memory _name);\r\n\r\n    function symbol() external view returns (string memory _symbol);\r\n\r\n    // function tokenURI(uint256 _tokenId) external view returns (string memory);\r\n}",
-  "sourcePath": "C:\\git\\2po\\2plusone\\src\\contracts\\interfaces\\IERC721Metadata.sol",
+  "sourcePath": "C:\\git\\project\\SWF2023_2PO\\src\\contracts\\interfaces\\IERC721Metadata.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/interfaces/IERC721Metadata.sol",
     "exportedSymbols": {
@@ -199,7 +199,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.14",
-  "updatedAt": "2023-08-01T13:44:27.754Z",
+  "updatedAt": "2023-08-01T21:14:19.982Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
