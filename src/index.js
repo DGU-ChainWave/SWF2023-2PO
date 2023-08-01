@@ -10,6 +10,8 @@ import {
   Behind,
   Wallet,
   Transaction,
+  Waiting,
+  WaitingDetail,
   NFT,
   BehindDetail,
   Intro,
@@ -37,6 +39,8 @@ root.render(
           <Route path="/Token" element={<Token />} />
           <Route path="/Throw" element={<Throw />} />
           <Route path="/inquiry" element={<Inquiry />} />
+          <Route path="/waiting" element={<Waiting />} />
+          <Route path="/waiting/:id" element={<WaitingDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

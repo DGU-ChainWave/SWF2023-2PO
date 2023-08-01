@@ -10,3 +10,5 @@ export { Intro } from "./Intro";
 export { BehindDetail } from "./BehindDetail";
 export { Throw } from "./Throw";
 export { Inquiry } from "./Inquiry";
+export { Waiting } from "./Waiting";
+export { WaitingDetail } from "./WaitingDetail";
