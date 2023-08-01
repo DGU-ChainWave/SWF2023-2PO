@@ -2,8 +2,8 @@ import Progress0 from "../assets/ProgressImage/Progress0.jpg";
 import Progress1 from "../assets/ProgressImage/Progress1.jpg";
 import Progress2 from "../assets/ProgressImage/Progress2.jpg";
 import Progress3 from "../assets/ProgressImage/Progress3.jpg";
-import Progress4 from "../assets/ProgressImage/Progress4.jpg";
-import Progress5 from "../assets/ProgressImage/Progress5.jpg";
+import Progress4 from "../assets/ProgressImage/Progress4.png";
+import Progress5 from "../assets/ProgressImage/Progress5.png";
 
 export const ProgressImage = [{ id: "0", name: "Progress0", src: Progress0 }];
 export const contents = [
@@ -227,7 +227,7 @@ export const contents = [
             },
           ], },
   {
-    title: "장애인",
+    title: "장애인에게 쾌적한 주거환경을",
     organization: "장애인복지관",
     image: Progress4,
     progress: 33,
@@ -238,12 +238,13 @@ export const contents = [
     date: "2023년",
     manager:"서민기",
     address: "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a",
-    text: `미세먼지로 인한 환경 오염은 우리가 직접적으로 개입할 수 있는 문제이기도 합니다. 
-           우리의 작은 노력이 모여 큰 변화를 만들 수 있습니다. 
-           그렇기에 저희는 여러분들의 따뜻한 마음과 도움을 기다리고 있습니다.
-           저희 지역의 기관과 단체들은 미세먼지 대책을 위해 다양한 활동을 전개하고 있습니다. 
-           그러나 이러한 활동들은 여러분들의 기부와 참여가 없이는 한계가 있습니다. 
-           우리 지역 사회가 함께 모여 더 나은 환경을 만들어가기 위해서는 여러분들의 지원이 필요합니다.`,
+    text: `장애인들에게 편안하고 쾌적한 주거환경을 제공하여, 
+    그들이 자립하고 자신만의 삶을 즐기도록 돕는 것이 목표입니다.
+    쾌적한 주거환경은 그들이 일상 생활에서 독립적으로 활동하고, 행복하게 지낼 수 있도록 필요한 기반이 됩니다. 
+    저희 복지관은 장애인들의 삶의 질을 향상시키기 위해 다양한 지원 프로그램과 시설 개선을 진행하고 있습니다.
+    우리는 기부금을 활용하여 주거환경을 개선하고, 보호 시설과 지원 프로그램을 강화하는데 사용할 것입니다. 
+    장애인들에게 더 나은 삶을 선물하기 위해 함께해주세요.
+    `,
            comments: [
             {
               userId: "익명",
@@ -253,7 +254,7 @@ export const contents = [
             {
               userId: "익명",
               date: "2023.08.02",
-              comment: "미세먼지 너무 심해요",
+              comment: "장애인도 평범하게 생활할 수 있는 세상이 오길 바랍니다..",
             },
             {
               userId: "익명",
@@ -263,17 +264,17 @@ export const contents = [
             {
               userId: "익명",
               date: "2023.08.01",
-              comment: "멋져요",
+              comment: "행복하세요",
             },
             {
               userId: "익명",
               date: "2023.08.01",
-              comment: "맑은 공기가 그리워요ㅠㅠ",
+              comment: "힘내세요",
             },
             {
               userId: "익명",
               date: "2023.07.31",
-              comment: "마스크 그만..",
+              comment: "적은 금액이지만 도움이 되길 바랍니다",
             },
             {
               userId: "익명",

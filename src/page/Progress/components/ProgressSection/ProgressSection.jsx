@@ -64,7 +64,7 @@ export const ProgressSection = () => {
         </CategoryButton>
         <CategoryButton
           isActive={selectedButton === "disabled"}
-          onClick={() => handleButtonClick("isabled")}
+          onClick={() => handleButtonClick("disabled")}
         >
           <Typo size="18px">장애인</Typo>
         </CategoryButton>
