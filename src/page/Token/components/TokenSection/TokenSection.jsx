@@ -58,7 +58,7 @@ export const TokenInfo = () => {
             2PlusOne(2PO)토큰을 드립니다.
           </NotiDescription>
           <NotiDescription>
-            3. NFT는 기부한 즉시 발행 가능합니다. 기부 진행상황 보기
+            3. NFT는 기부한 즉시 발행 가능합니다. 
           </NotiDescription>
         </NotiDescriptionContainer>
       </NotiBeforeDonationContainer>

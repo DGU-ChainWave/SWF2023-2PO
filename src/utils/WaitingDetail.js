@@ -1,6 +1,6 @@
 import Waiting0 from "../assets/WaitingImage/Waiting0.jpeg";
 import Waiting1 from "../assets/WaitingImage/Waiting1.jpeg";
-import Waiting2 from "../assets/WaitingImage/Waiting2.jpeg";
+import Waiting2 from "../assets/WaitingImage/Waiting2.jpg";
 import Waiting3 from "../assets/WaitingImage/Waiting3.jpeg";
 import Waiting4 from "../assets/WaitingImage/Waiting4.jpeg";
 import Waiting5 from "../assets/WaitingImage/Waiting5.jpeg";
@@ -139,7 +139,7 @@ export const contents = [
     text: `우리는 독거노인들에게 따뜻한 마음을 전달하고, 
     그들의 외로운 삶을 함께 나누며, 소중한 지지를 제공하는 것을 목표로 합니다.
     독거노인들은 그들의 삶을 더욱 풍요롭게 만들고, 사회와 연결되는 기회를 갖도록 돕기 위해 다양한 지원 프로그램과 시설을 운영하고 있습니다.
-    여러분의 기부는 독거노인들에게 따뜻한 마음을 전달하는 데 큰 역할을 합니다. 기부금은 독거노인들과 함께 보내는 특별한 시간을 만들어주고, 사회활동 기회를 제공하는 데 사용됩니다. 우리는 독거노인들의 외로운 삶을 함께 극복하는데 여러분의 지지가 필요합니다.
+    여러분의 기부는 독거노인들에게 따뜻한 마음을 전달하는 데 큰 역할을 합니다. 기부금은 독거노인들과 함께 보내는 특별한 시간을 만들어주고, 사회활동 기회를 제공하는 데 사용됩니다. 독거노인들의 외로운 삶을 함께 극복하는데 여러분의 지지가 필요합니다.
     `,
     manager: "노희진",
     comments: [
