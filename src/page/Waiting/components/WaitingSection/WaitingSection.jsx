@@ -15,6 +15,7 @@ import {
   DonateButton,
   FullBar,
   Bar,
+  Root,
 } from "./styled";
 
 export const WaitingSection = () => {
@@ -28,7 +29,7 @@ export const WaitingSection = () => {
   //contents 내용
 
   return (
-    <div>
+    <Root>
       <TypoContainer>
         <Typo size="48px">
           다음 대기명단에 <TypoOrange size="48px">투표</TypoOrange>
@@ -108,6 +109,6 @@ export const WaitingSection = () => {
             ))}
         </ContentsBox>
       </div>
-    </div>
+    </Root>
   );
 };

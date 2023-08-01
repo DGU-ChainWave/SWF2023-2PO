@@ -15,7 +15,8 @@ import {
   Bar,
   BottomBox,
   TypoContainer,
-  TypoOrange
+  TypoOrange,
+  Root,
 } from "./styled";
 
 export const ProgressSection = () => {
@@ -29,7 +30,7 @@ export const ProgressSection = () => {
   //contents 내용
 
   return (
-    <div>
+    <Root>
       <TypoContainer>
         <Typo size="48px">
           다음 기부명단에 <TypoOrange size="48px">기부</TypoOrange>
@@ -101,7 +102,8 @@ export const ProgressSection = () => {
                       <Bar width={content.barWidth} />
                     </FullBar>
                     <TypoWhite size="16px" top="7px" left="1px">
-                      누적 기부 {content.totalDonation}원 / {content.targetDonation}원
+                      누적 기부 {content.totalDonation}원 /{" "}
+                      {content.targetDonation}원
                     </TypoWhite>
                   </Shadow>
                 </Contents>
@@ -109,6 +111,6 @@ export const ProgressSection = () => {
             ))}
         </ContentsBox>
       </div>
-    </div>
+    </Root>
   );
 };

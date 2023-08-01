@@ -107,10 +107,8 @@ export const WaitingDetail = () => {
     <Root>
       <BackContainer>
         <TopBox>
-          <Typo size="37px" left="100px">
-            {selectedContent.title}
-          </Typo>
-          <Typo size="15px" left="100px" top="20px">
+          <Typo size="37px">{selectedContent.title}</Typo>
+          <Typo size="15px" top="20px">
             후원 기간 : 후원 대상 선정으로부터 1달 &nbsp;&nbsp;•&nbsp;&nbsp;
             <img src="/tag.svg" alt="테그" />
             {selectedContent.organization}

@@ -11,7 +11,12 @@ const fontWeight = css`
   font-weight: ${(props) => props.fontWeight || "600"};
 `;
 
-export const Root = styled.div``;
+export const Root = styled.div`
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const BackContainer = styled.div`
   width: 100%;
@@ -27,7 +32,7 @@ export const TopBox = styled.div`
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 181px;
   flex-shrink: 0;
 `;
@@ -58,7 +63,7 @@ export const GridItem = styled.div`
   height: 100%;
   background-color: #fff;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   position: relative;
 `;
 
@@ -251,8 +256,8 @@ export const CloseButton = styled.button`
 `;
 
 export const ModalContent = styled.div`
-display:flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 450px;
   height: 250px;
   flex-shrink: 0;

@@ -2,12 +2,17 @@ import styled, { css } from "styled-components";
 
 const customMargin = css`
   margin: ${(props) =>
-    `${props.top || "0px"} ${props.right || "0px"} ${props.bottom ||
-      "0px"} ${props.left || "0px"}`};
+    `${props.top || "0px"} ${props.right || "0px"} ${props.bottom || "0px"} ${
+      props.left || "0px"
+    }`};
 `;
 
 const commonFontSize = css`
   font-size: ${(props) => props.size || "50px"};
+`;
+
+export const Root = styled.div`
+  width: 1350px;
 `;
 
 export const TopBox = styled.div`
@@ -31,7 +36,7 @@ export const Typo = styled.span`
   line-height: normal;
   ${commonFontSize} // Reuse the common font size
   ${customMargin}
-  `;
+`;
 
 export const TypoOrange = styled.span`
   color: #ff7425;
@@ -49,12 +54,12 @@ export const TypoContainer = styled.div`
 
 export const CategoryBox = styled.div`
   display: flex;
-  width: 100%;
+  width: 1280px;
   height: 38px;
   align-items: flex-start;
   gap: 12px;
   flex-shrink: 0;
-  padding-left: 80px;
+  padding-left: 30px;
   padding-right: 80px;
 `;
 
@@ -73,17 +78,17 @@ export const CategoryButton = styled.button`
 `;
 
 export const ContentsBox = styled.div`
-         display: flex;
-         width: 100%;
-         min-height: 500px;
-         flex-shrink: 0;
-         padding-top: 70px;
-         padding-bottom: 100px;
-         justify-content: center;
-         align-items: center;
-         flex-wrap: wrap;
-         gap: 50px;
-       `;
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+  flex-shrink: 0;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+`;
 
 export const Contents = styled.div`
   display: flex;
@@ -93,10 +98,10 @@ export const Contents = styled.div`
 `;
 
 export const Image = styled.img`
-width: 400px;
-height: 400px;
-         border-radius: 24px;
-       `;
+  width: 400px;
+  height: 400px;
+  border-radius: 24px;
+`;
 
 export const Shadow = styled.button`
   display: flex;
@@ -140,7 +145,7 @@ export const DonateButton = styled.button`
   &:hover {
     background: #d55711;
   }
-  margin-top: 25px;  
+  margin-top: 25px;
   margin-bottom: 60px;
 
   justify-content: ${(props) => props.justify || "flex-start"};
