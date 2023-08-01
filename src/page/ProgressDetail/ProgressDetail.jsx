@@ -40,11 +40,7 @@ import useMeowwContract from "../../hooks/useMeowwContract";
 //import { Header, Button, Popup, Grid } from 'semantic-ui-react'
 
 export const ProgressDetail = () => {
-  const options = [
-    "비트코인",
-    "이더리움",
-    "테더",
-  ]
+  const options = ["bitcoin", "ethereum", "tether"];
   const { id } = useParams();
   const index = parseInt(id);
 
@@ -802,7 +798,7 @@ export const ProgressDetail = () => {
                           bottom="10px"
                         >
                           지급 예정 토큰:{" "}
-                          {(coinAPI * commentValueNumber*0.1).toFixed(0)}PO
+                          {(coinAPI * commentValueNumber * 0.1).toFixed(0)}PO
                         </Typo>
                       </Box>
                       <Box
