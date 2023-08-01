@@ -13,3 +13,4 @@ export { Throw } from "./Throw";
 export { Inquiry } from "./Inquiry";
 export { Waiting } from "./Waiting";
 export { WaitingDetail } from "./WaitingDetail";
+export { ProgressDetail } from "./ProgressDetail";
