@@ -10,12 +10,16 @@ import {
   Behind,
   Wallet,
   Transaction,
+  Waiting,
+  WaitingDetail,
   NFT,
   BehindDetail,
   Intro,
   Token,
+  Throw,
+  Inquiry,
+  Rank,
 } from "./page";
-import * as serviceWorker from "./serviceWorker";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -34,6 +38,11 @@ root.render(
           <Route path="/nft" element={<NFT />} />
           <Route path="/Intro" element={<Intro />} />
           <Route path="/Token" element={<Token />} />
+          <Route path="/Throw" element={<Throw />} />
+          <Route path="/inquiry" element={<Inquiry />} />
+          <Route path="/waiting" element={<Waiting />} />
+          <Route path="/waiting/:id" element={<WaitingDetail />} />
+          <Route path="/rank" element={<Rank />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,6 +1,7 @@
 export { Home } from "./Home";
 export { Progress } from "./Progress";
 export { Behind } from "./Behind";
+export { Rank } from "./Rank";
 export { FAQ } from "./FAQ";
 export { Wallet } from "./Wallet";
 export { Transaction } from "./Transaction";
@@ -8,3 +9,7 @@ export { NFT } from "./NFT";
 export { Token } from "./Token";
 export { Intro } from "./Intro";
 export { BehindDetail } from "./BehindDetail";
+export { Throw } from "./Throw";
+export { Inquiry } from "./Inquiry";
+export { Waiting } from "./Waiting";
+export { WaitingDetail } from "./WaitingDetail";
