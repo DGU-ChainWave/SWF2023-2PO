@@ -23,14 +23,12 @@ import {
   TableRow,
   TableHeader,
   TableCell,
-  Link,
   LatestBlocksContainer,
   LatestBlocksTitle,
   BlocksTable,
   BlockRow,
   BlockHeader,
   BlockCell,
-  BlockLink,
   BlockIcon,
   BlockErrorIcon,
   AddressLabel,
@@ -65,7 +63,8 @@ export const Upper = () => {
   return (
     <UpperContainer>
       <TitleContainer>
-        <Title>거래 내역 탐색기</Title>
+      <Title>거래 내역 탐색기</Title>
+
       </TitleContainer>
       <SearchContainer>
         <SearchBar />

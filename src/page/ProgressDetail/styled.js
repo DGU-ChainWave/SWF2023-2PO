@@ -74,7 +74,13 @@ export const Image = styled.img`
   height: 450px;
   border-radius: 12px;
 `;
-
+export const Image2 = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center;
+`;
 export const VoteContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -106,6 +112,7 @@ export const Box = styled.div`
   height: ${(props) => props.height || "0"};
   background: ${(props) => props.background || "none"};
   border-radius: ${(props) => props.borderRadius || "none"};
+  justify-content: ${(props) => props.justifyContent || "none"};
   flex-shrink: 0;
   ${customMargin}
 `;
@@ -212,7 +219,7 @@ export const Comment = styled.div`
   border-radius: 12px;
   background: #d9d9d9;
   gap: 40px;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -244,6 +251,11 @@ export const CloseButton = styled.button`
   justify-content: center;
   top: "10px";
   ${customMargin}
+`;
+
+export const NFTButton = styled(CloseButton)`
+  background: #fff;
+  border: 1px solid #ff7425;
 `;
 
 export const ModalContent = styled.div`

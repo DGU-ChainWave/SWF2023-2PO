@@ -2,7 +2,7 @@ const navItems = [
   {
     text: "기부런 소개",
     details: [
-      { name: "소개", src: "intro" },
+      { name: "소개", src: "Intro" },
       { name: "기부 비하인드", src: "behind" },
     ],
   },
@@ -12,7 +12,7 @@ const navItems = [
       { name: "지갑 연동", src: "wallet" },
       { name: "NFT", src: "nft" },
       { name: "토큰 사용법", src: "token" },
-      { name: "기부금 전달 방식", src: "Throw" },
+      { name: "기부금 전달 방식", src: "throw" },
     ],
   },
   {
