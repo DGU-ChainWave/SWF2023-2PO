@@ -17,7 +17,7 @@ export const IntroRoot = styled.div`
   flex-direction: column;
   width: 1280px;
   height: fit-content;
-  margin-top: 10px;
+  margin-top: 0px;
 `;
 
 export const Container = styled.div`

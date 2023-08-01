@@ -11,12 +11,17 @@ import {
   NavItemText,
   Root,
   WalletButton,
+  WalletAddressTypo,
+  FullWalletAddressTypo,
 } from "./styled";
 import navItems from "../../utils/NavUtils";
 import { useMemo } from "react";
 import { useNavigate } from "react-router";
+import { useRecoilValue } from "recoil";
+import { walletAddressState } from "../../store/atoms";
 
 export const Nav = () => {
+  const walletAddress = useRecoilValue(walletAddressState);
   const [isPopupOpen, setPopupOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -49,7 +54,13 @@ export const Nav = () => {
               </Tooltip>
             </NavItem>
           ))}
-          <WalletButton onClick={openPopup}>지갑 연동</WalletButton>
+          {walletAddress ? (
+            <WalletAddressTypo>
+              {`${walletAddress.slice(0, 6)}...`}
+            </WalletAddressTypo>
+          ) : (
+            <WalletButton onClick={openPopup}>지갑 연동</WalletButton>
+          )}
         </Container>
       </Root>
       {isPopupOpen && (

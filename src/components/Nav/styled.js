@@ -93,6 +93,22 @@ export const NavItemText = styled.div`
   }
 `;
 
+export const WalletAddressTypo = styled.div`
+  position: relative;
+  width: fit-content;
+  margin: 5px 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #666;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: 700;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`;
+
 export const WalletButton = styled.button`
   width: 90px;
   height: 40px;
