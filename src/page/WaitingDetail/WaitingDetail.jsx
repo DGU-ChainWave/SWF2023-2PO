@@ -344,7 +344,7 @@ export const WaitingDetail = () => {
                   30명 투표
                 </Typo>
               </Box>
-              <OrangeButton onClick={handleOpenFirstModal} top="32px">
+              <OrangeButton onClick={handleOpenFirstModal} top="10px">
                 <Typo size="15px" fontWeight="700" color="#fff" top="5px">
                   토큰으로 투표하기
                 </Typo>
@@ -444,7 +444,7 @@ export const WaitingDetail = () => {
                   </ModalContent>
                 </Modal>
               )}
-              <ShareButton bottom="10px">
+              <ShareButton>
                 <Typo size="15px" fontWight="700" color="#000" top="5px">
                   공유하기
                 </Typo>

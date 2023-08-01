@@ -388,7 +388,7 @@ export const ProgressDetail = () => {
                   30명 기부
                 </Typo>
               </Box>
-              <OrangeButton onClick={handleOpenFirstModal} top="15px">
+              <OrangeButton onClick={handleOpenFirstModal} top="0px">
                 <Typo size="15px" fontWeight="700" color="#fff" top="5px">
                   코인으로 기부하기
                 </Typo>
