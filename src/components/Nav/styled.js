@@ -44,13 +44,13 @@ export const NavItem = styled.div`
   position: relative;
   cursor: pointer;
   &:first-of-type {
-    /* margin-bottom: 10px; */
+    margin-bottom: 9px;
   }
 `;
 
 export const Tooltip = styled.div`
   position: absolute;
-  top: 140%;
+  top: 120%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -94,14 +94,14 @@ export const NavItemText = styled.div`
 `;
 
 export const WalletButton = styled.button`
-  width: 95px;
-  height: 40px;
+  width: 112px;
+  height: 48px;
   border-radius: 10px;
   background: #ff7425;
   color: #fff;
   text-align: center;
   font-family: Noto Sans KR;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   /* margin-left: 10px; */
   transition: 0.3s;
