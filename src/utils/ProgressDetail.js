@@ -2,8 +2,8 @@ import Progress0 from "../assets/ProgressImage/Progress0.jpg";
 import Progress1 from "../assets/ProgressImage/Progress1.jpg";
 import Progress2 from "../assets/ProgressImage/Progress2.jpg";
 import Progress3 from "../assets/ProgressImage/Progress3.jpg";
-import Progress4 from "../assets/ProgressImage/Progress4.png";
-import Progress5 from "../assets/ProgressImage/Progress5.png";
+import Progress4 from "../assets/ProgressImage/Progress4.jpg";
+import Progress5 from "../assets/ProgressImage/Progress5.jpg";
 
 export const ProgressImage = [{ id: "0", name: "Progress0", src: Progress0 }];
 export const contents = [
@@ -70,7 +70,7 @@ export const contents = [
     barWidth: "110px",
     totalDonation: "640,000",
     targetDonation: "2,000,000",
-    categories: ["all", "child"],
+    categories: ["all", "weak"],
     date: "2023년",
     manager:"박정우",
     address: "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a",
@@ -125,7 +125,7 @@ export const contents = [
     barWidth: "230px",
     totalDonation: "750,000",
     targetDonation: "1,000,000",
-    categories: ["all", "old"],
+    categories: ["all", "weak"],
     date: "2023년",
     manager:"이서윤",
     address: "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a",
@@ -179,7 +179,7 @@ export const contents = [
     barWidth: "110px",
     totalDonation: "750,000",
     targetDonation: "3,000,000",
-    categories: ["all", "child", "medical"],
+    categories: ["all", "weak", "medical"],
     date: "2023년",
     manager:"김도윤",
     address: "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a",
@@ -227,24 +227,24 @@ export const contents = [
             },
           ], },
   {
-    title: "장애인에게 쾌적한 주거환경을",
-    organization: "장애인복지관",
+    title: "고농도 미세먼지, 함께 해결해요!",
+    organization: "에코아시아",
     image: Progress4,
     progress: 33,
     barWidth: "125px",
     totalDonation: "330,000",
     targetDonation: "1,000,000",
-    categories: ["all", "disabled"],
+    categories: ["all", "environment"],
     date: "2023년",
     manager:"서민기",
     address: "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a",
-    text: `장애인들에게 편안하고 쾌적한 주거환경을 제공하여, 
-    그들이 자립하고 자신만의 삶을 즐기도록 돕는 것이 목표입니다.
-    쾌적한 주거환경은 그들이 일상 생활에서 독립적으로 활동하고, 행복하게 지낼 수 있도록 필요한 기반이 됩니다. 
-    저희 복지관은 장애인들의 삶의 질을 향상시키기 위해 다양한 지원 프로그램과 시설 개선을 진행하고 있습니다.
-    우리는 기부금을 활용하여 주거환경을 개선하고, 보호 시설과 지원 프로그램을 강화하는데 사용할 것입니다. 
-    장애인들에게 더 나은 삶을 선물하기 위해 함께해주세요.
-    `,
+
+    text: `미세먼지로 인한 환경 오염은 우리가 직접적으로 개입할 수 있는 문제이기도 합니다. 
+           우리의 작은 노력이 모여 큰 변화를 만들 수 있습니다. 
+           그렇기에 저희는 여러분들의 따뜻한 마음과 도움을 기다리고 있습니다.
+           저희 지역의 기관과 단체들은 미세먼지 대책을 위해 다양한 활동을 전개하고 있습니다. 
+           그러나 이러한 활동들은 여러분들의 기부와 참여가 없이는 한계가 있습니다. 
+           우리 지역 사회가 함께 모여 더 나은 환경을 만들어가기 위해서는 여러분들의 지원이 필요합니다.`,
            comments: [
             {
               userId: "익명",
@@ -254,7 +254,7 @@ export const contents = [
             {
               userId: "익명",
               date: "2023.08.02",
-              comment: "장애인도 평범하게 생활할 수 있는 세상이 오길 바랍니다..",
+              comment: "미세먼지 너무 심해요",
             },
             {
               userId: "익명",
@@ -264,17 +264,17 @@ export const contents = [
             {
               userId: "익명",
               date: "2023.08.01",
-              comment: "행복하세요",
+              comment: "멋져요",
             },
             {
               userId: "익명",
               date: "2023.08.01",
-              comment: "힘내세요",
+              comment: "맑은 공기가 그리워요ㅠㅠ",
             },
             {
               userId: "익명",
               date: "2023.07.31",
-              comment: "적은 금액이지만 도움이 되길 바랍니다",
+              comment: "마스크 그만..",
             },
             {
               userId: "익명",
@@ -284,33 +284,34 @@ export const contents = [
           ], },
 
           {
-            title: "치매 어르신들에게 희망을 주세요.",
-            organization: "노인지원센터",
+            title: "심장병으로 생사의 길에 선 코코",
+            organization: "서울동물권리연합",
             manager:"김동국",
             image: Progress5,
             progress: 70,
             barWidth: "210px",
             totalDonation: "1,400,000",
             targetDonation: "2,000,000",
-            categories: ["all", "old"],
+            categories: ["all", "animal", "medical"],
             date: "2023년",
-            text: `여러분의 기부는 희망의 선물입니다. 
-            치매 어르신들에게 따뜻한 마음을 전달하고, 자신감을 심어주며, 삶에 의미를 부여해줍니다. 
-            기부금은 어르신들과 함께 즐거운 시간을 보내기 위해 활용됩니다. 
-            예를 들어, 음악 테라피, 예술 프로그램, 자연 여행 등을 통해 어르신들의 일상을 더욱 풍요롭게 할 수 있습니다.
-            희망을 주는 여정에 여러분의 따뜻한 마음과 지지를 더해주세요. 치매 어르신들에게 빛과 희망을 전하는데 도움을 주세요. 
-            치매 어르신들의 미소와 행복한 순간들을 함께 만들어나가요.
-            `,
+            address: "0x2401bC67706121CCa309d6cd01a05E2fdF9Cff4a",
+
+            text: `우리 사랑하는 반려견 코코가 응급한 상태에 처해있습니다. 
+                   코코는 우리 가족의 소중한 구성원으로서 항상 행복한 시간을 함께 나누었습니다. 
+                   하지만 현재 건강이 위태롭고, 의료 비용이 절실한 상황입니다.
+                   의료 비용이 부담스러운 만큼, 우리는 여러분들의 따뜻한 마음과 도움을 빌리고자 합니다. 
+                   코코의 수술을 위해 기부를 모으고 있으며, 작은 기부라도 큰 도움이 될 것입니다. 
+                   여러분들의 선행에 감사드립니다.`,
                    comments: [
                    {
                     userId: "익명",
                     date: "2023.08.02",
-                    comment: "건강과 행복을 기도합니다!",
+                    comment: "코코 응원합니다!!",
                   },
                   {
                     userId: "익명",
                     date: "2023.08.02",
-                    comment: "힘내세요.",
+                    comment: "귀여운 코코ㅜㅜ",
                   },
                   {
                     userId: "익명",
@@ -325,7 +326,7 @@ export const contents = [
                   {
                     userId: "익명",
                     date: "2023.08.01",
-                    comment: "하루하루 행복하세요",
+                    comment: "코코야 잘 이겨내렴",
                   },
                   {
                     userId: "익명",
@@ -335,7 +336,7 @@ export const contents = [
                   {
                     userId: "익명",
                     date: "2023.07.31",
-                    comment: "행복하세요!!",
+                    comment: "응원합니다!!",
                   },
                 ], }
               ];

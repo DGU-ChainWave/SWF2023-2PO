@@ -24,12 +24,12 @@ export const OverlayWrapper = styled.div`
   height: 586.17px;
   transform: rotate(-0.03deg);
   transform-origin: 0 0;
+  
 `;
-
 export const Span = styled.span`
   color: #5147b2;
+  
 `;
-
 export const B = styled.b`
   position: absolute;
   top: 39px;
@@ -37,6 +37,7 @@ export const B = styled.b`
   display: inline-block;
   width: 429.2px;
   height: 66.12px;
+  
 `;
 export const Div2 = styled.div`
   position: absolute;

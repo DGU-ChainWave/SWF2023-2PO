@@ -1,10 +1,10 @@
 import { Root } from "./styled";
-import { Background } from "./components";
+import { Background} from "./components";
 
 export const Rank = () => {
   return (
     <Root>
-      <Background />
+        <Background/>
     </Root>
   );
 };
