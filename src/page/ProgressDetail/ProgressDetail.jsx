@@ -796,7 +796,7 @@ export const ProgressDetail = () => {
                           bottom="10px"
                         >
                           지급 예정 토큰:{" "}
-                          {(coinAPI * commentValueNumber).toFixed(0)}PO
+                          {(coinAPI * commentValueNumber)*0.1.toFixed(0)}PO
                         </Typo>
                       </Box>
                       <Box
