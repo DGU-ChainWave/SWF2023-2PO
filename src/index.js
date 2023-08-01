@@ -18,6 +18,7 @@ import {
   Token,
   Throw,
   Inquiry,
+  Rank,
 } from "./page";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -41,6 +42,7 @@ root.render(
           <Route path="/inquiry" element={<Inquiry />} />
           <Route path="/waiting" element={<Waiting />} />
           <Route path="/waiting/:id" element={<WaitingDetail />} />
+          <Route path="/rank" element={<Rank />} />
         </Route>
       </Routes>
     </BrowserRouter>

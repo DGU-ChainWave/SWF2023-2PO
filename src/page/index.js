@@ -1,6 +1,7 @@
 export { Home } from "./Home";
 export { Progress } from "./Progress";
 export { Behind } from "./Behind";
+export { Rank } from "./Rank";
 export { FAQ } from "./FAQ";
 export { Wallet } from "./Wallet";
 export { Transaction } from "./Transaction";
