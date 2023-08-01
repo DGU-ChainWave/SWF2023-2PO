@@ -1,15 +1,15 @@
 const { assert } = require("chai");
 
-const KryptoBirdz = artifacts.require("./KryptoBirdz");
+const Meoww = artifacts.require("./Meoww");
 
 // check for chai
 require("chai").use(require("chai-as-promised")).should();
 
-contract("KryptoBirdz", (accounts) => {
+contract("Meoww", (accounts) => {
   let contract;
   // before tells our tests to run this first before anything else
   before(async () => {
-    contract = await KryptoBirdz.deployed();
+    contract = await Meoww.deployed();
   });
 
   // testing container - describe
@@ -25,11 +25,11 @@ contract("KryptoBirdz", (accounts) => {
     });
     it("has a name", async () => {
       const name = await contract.name();
-      assert.equal(name, "KryptoBirdz");
+      assert.equal(name, "Meoww");
     });
     it("has a symbol", async () => {
       const symbol = await contract.symbol();
-      assert.equal(symbol, "KBZ");
+      assert.equal(symbol, "MEW");
     });
   });
 
@@ -59,7 +59,7 @@ contract("KryptoBirdz", (accounts) => {
   });
 
   describe("indexing", () => {
-    it("lists KryptoBirdz", async () => {
+    it("lists Meowwz", async () => {
       // Mint three new tokens
       await contract.mint(
         "0x86948078a2bC9A367DE4c1E24E9E8573f09cF20b",
@@ -76,10 +76,10 @@ contract("KryptoBirdz", (accounts) => {
       const totalSupply = await contract.totalSupply();
       // Loop through list and grab KBirdz from list
       let result = [];
-      let KryptoBirdz;
+      let Meowwz;
       for (let i = 1; i <= totalSupply; i++) {
-        KryptoBirdz = await contract.kryptoBirdz(i - 1);
-        result.push(KryptoBirdz);
+        Meowwz = await contract.meowwz(i - 1);
+        result.push(Meowwz);
       }
     });
   });

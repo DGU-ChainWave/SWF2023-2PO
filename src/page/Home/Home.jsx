@@ -15,14 +15,14 @@ import behindContents from "../../utils/BehindDetailcontents";
 
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
-import KryptoBirdz from "../../truffle_abis/KryptoBirdz.json";
+import Meoww from "../../truffle_abis/Meoww.json";
 import { useEffect, useState } from "react";
 
 export const Home = () => {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
   const [totalSupply, setTotalSupply] = useState(0);
-  const [kryptoBirdz, setKryptoBirdz] = useState([]);
+  const [meowwz, setMeowwz] = useState([]);
 
   const loadWeb3 = async () => {
     if (window.ethereum) {
@@ -46,11 +46,11 @@ export const Home = () => {
       console.log(accounts[0]);
 
       const networkId = await web3.eth.net.getId();
-      const networkData = KryptoBirdz.networks[networkId];
+      const networkData = Meoww.networks[networkId];
       console.log(networkData);
 
       if (networkData) {
-        const abi = KryptoBirdz.abi;
+        const abi = Meoww.abi;
         const address = networkData.address;
         const contract = new web3.eth.Contract(abi, address);
         setContract(contract);
@@ -61,9 +61,9 @@ export const Home = () => {
         setTotalSupply(totalSupply);
 
         for (let i = 0; i < totalSupply; i++) {
-          const KryptoBirdz = await contract.methods.kryptoBirdz(i).call();
-          console.log(KryptoBirdz);
-          setKryptoBirdz((prevState) => [...prevState, KryptoBirdz]);
+          const Meoww = await contract.methods.meowwz(i).call();
+          console.log(Meoww);
+          setMeowwz((prevState) => [...prevState, Meoww]);
         }
       }
     } else {
@@ -73,13 +73,13 @@ export const Home = () => {
     }
   };
 
-  const mint = (to, tokenURI) => {
+  const mint = (to, meoww) => {
     contract.methods
-      .mint(to, tokenURI)
+      .mint(to, meoww)
       .send({ from: account })
       .once("receipt", (receipt) => {
         console.log(receipt);
-        setKryptoBirdz((prevState) => [...prevState, tokenURI]);
+        setMeowwz((prevState) => [...prevState, meoww]);
       });
   };
 
@@ -89,8 +89,8 @@ export const Home = () => {
   }, []);
 
   useEffect(() => {
-    console.log(kryptoBirdz);
-  }, [kryptoBirdz]);
+    console.log(meowwz);
+  }, [meowwz]);
 
   return (
     <Root>
