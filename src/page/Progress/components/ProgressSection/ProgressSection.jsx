@@ -45,28 +45,28 @@ export const ProgressSection = () => {
           <Typo size="18px">All</Typo>
         </CategoryButton>
         <CategoryButton
+          isActive={selectedButton === "animal"}
+          onClick={() => handleButtonClick("animal")}
+        >
+          <Typo size="18px">동물</Typo>
+        </CategoryButton>
+        <CategoryButton
           isActive={selectedButton === "disaster"}
           onClick={() => handleButtonClick("disaster")}
         >
           <Typo size="18px">재난</Typo>
         </CategoryButton>
         <CategoryButton
-          isActive={selectedButton === "child"}
-          onClick={() => handleButtonClick("child")}
+          isActive={selectedButton === "weak"}
+          onClick={() => handleButtonClick("weak")}
         >
-          <Typo size="18px">아동</Typo>
+          <Typo size="18px">사회적 약자</Typo>
         </CategoryButton>
         <CategoryButton
-          isActive={selectedButton === "old"}
-          onClick={() => handleButtonClick("old")}
+          isActive={selectedButton === "environment"}
+          onClick={() => handleButtonClick("environment")}
         >
-          <Typo size="18px">어르신</Typo>
-        </CategoryButton>
-        <CategoryButton
-          isActive={selectedButton === "disabled"}
-          onClick={() => handleButtonClick("disabled")}
-        >
-          <Typo size="18px">장애인</Typo>
+          <Typo size="18px">환경</Typo>
         </CategoryButton>
         <CategoryButton
           isActive={selectedButton === "medical"}

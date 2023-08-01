@@ -4,7 +4,7 @@ export const BackContainer = styled.div`
   width: 100%;
   height: 1530px;
   flex-shrink: 0;
-  background: #ffffff;
+  background: #FFFFFF;
   margin-top: 5px;
   padding-top: 40px;
   display: flex;
@@ -65,15 +65,15 @@ export const ImageText = styled.div`
 export const Line = styled.div`
   width: 1100px;
   height: 0.7px;
-  background: #bbbbbb;
+  background: #BBBBBB;
 `;
 
 export const Back = styled.div`
   width: 1300px;
   height: 40px;
   margin-top: 20px;
-  background: #e6eaf3;
-  border-top: 2px solid #bbc5da;
+  background: #E6EAF3;
+  border-top: 2px solid #BBC5DA;
   display: flex;
   align-items: center;
 `;
@@ -81,30 +81,35 @@ export const Back = styled.div`
 export const PersonContainer = styled.div`
   width: 1300px;
   height: 150px;
-  background: #ffffff;
-  border-bottom: 2px solid #e5e5e5;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E5E5E5;
   display: flex;
   align-items: center;
 `;
 
 export const PersonImage = styled.img`
   width: 120px;
-  height: 120px;
+  height: 120px; 
   border-radius: 90%;
   object-fit: cover;
   cursor: pointer;
-  margin: ${(props) => `${props.left || "0px"}`};
+  margin: ${(props) =>
+    `${
+      props.left || "0px"
+    }`};
 `;
 
 export const NameContainer = styled.div`
   width: 300px;
   height: 50px;
-  background: #ffffff;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin: ${(props) => `${props.left || "0px"}`};
+  background: #FFFFFF;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   margin: ${(props) =>
+    `${props.left || "0px"}`};
+
 `;
 
 export const ButtonContainer = styled.div`
@@ -115,8 +120,8 @@ export const ButtonContainer = styled.div`
 
 export const Button = styled.button`
   font-size: 20px;
-  background-color: ${({ isActive }) => (isActive ? "#000000" : "#FFFFFF")};
-  color: ${({ isActive }) => (isActive ? "#FFFFFF" : "#000000")};
+  background-color: ${({ isActive }) => (isActive ? '#000000' : '#FFFFFF')};
+  color: ${({ isActive }) => (isActive ? '#FFFFFF' : '#000000')};
   border: 2px solid #000000;
   border-radius: 10px;
   padding: 10px 20px;
@@ -126,6 +131,6 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #000000;
-    color: #ffffff;
+    color: #FFFFFF;
   }
 `;

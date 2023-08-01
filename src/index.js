@@ -5,22 +5,22 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./Routes/Layout";
 import {
   Home,
-  Progress,
-  FAQ,
   Behind,
-  Wallet,
-  Transaction,
+  Rank,
+  BehindDetail,
+  Progress,
+  ProgressDetail,
   Waiting,
   WaitingDetail,
-  NFT,
-  BehindDetail,
-  Intro,
+  Transaction,
   Token,
-  Throw,
   Inquiry,
-  Rank,
-  ProgressDetail,
+  Throw,
+  NFT,
+  Intro,
+  Wallet,
 } from "./page";
+import * as serviceWorker from "./serviceWorker";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,23 +30,26 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="progress" element={<Progress />} />
-          <Route path="progress/:id" element={<ProgressDetail />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/wallet" element={<Wallet />} />
           <Route path="/behind" element={<Behind />} />
           <Route path="/behind/:id" element={<BehindDetail />} />
-          <Route path="/transaction" element={<Transaction />} />
-          <Route path="/nft" element={<NFT />} />
-          <Route path="/Intro" element={<Intro />} />
-          <Route path="/Token" element={<Token />} />
-          <Route path="/Throw" element={<Throw />} />
-          <Route path="/inquiry" element={<Inquiry />} />
+          <Route path="/rank" element={<Rank />} />
           <Route path="/waiting" element={<Waiting />} />
           <Route path="/waiting/:id" element={<WaitingDetail />} />
-          <Route path="/rank" element={<Rank />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/progress/:id" element={<ProgressDetail />} />
+          <Route path="/token" element={<Token />} />
+          <Route path="/throw" element={<Throw />} />
+          <Route path="/transaction" element={<Transaction />} />
+          <Route path="/inquiry" element={<Inquiry />} />
+          <Route path="/NFT" element={<NFT />} />
+          <Route path="/Intro" element={<Intro />} />
+          <Route path="/Wallet" element={<Wallet />} />
         </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
