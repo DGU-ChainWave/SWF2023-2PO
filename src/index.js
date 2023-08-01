@@ -19,6 +19,7 @@ import {
   Throw,
   Inquiry,
   Rank,
+  ProgressDetail,
 } from "./page";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -30,6 +31,7 @@ root.render(
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="progress" element={<Progress />} />
+          <Route path="progress/:id" element={<ProgressDetail />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/wallet" element={<Wallet />} />
           <Route path="/behind" element={<Behind />} />
