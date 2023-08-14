@@ -12,8 +12,12 @@ export const BehindDetail = () => {
         title="기부 비하인드"
         subtitle="여러분들의 성원아래 많은 이들이 다시 일어설 수 있었습니다"
       />
+      
       <BehindDetailcontents id={id}>
       </BehindDetailcontents>
+      <h1>
+        hiee
+      </h1>
     </div>
   );
 };
